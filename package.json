@@ -4,6 +4,7 @@
   "description": "Challenge 11 - Note Taker",
   "main": "server.js",
   "scripts": {
+    "start": "node --watch public/assets/server.js",
     "test": "echo \\\"Error: no test specified\\\" && exit 1"
   },
   "author": "",
