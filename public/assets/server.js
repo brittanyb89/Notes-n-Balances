@@ -6,18 +6,21 @@ const express = require('express');
 const app = express();
 
 // Set up port
-const http = require("http");
 const PORT = process.env.PORT || 3001;
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { "Content-Type": "text/html" })
-    res.end('Hello world!')
-})
-
-server.listen(PORT, () => console.log(`server started on port ${PORT};` + 'press Ctrl-C to terminate....'));
-   
 // Use UUID to generate unique IDs for each note
 const { v4: uuidv4 } = require('uuid');
+
+// HTML routes
+// TODO: Create a GET /notes route that returns notes.html
+app.get('/notes', (req, res) => {
+    res.sendFile(join(__dirname, '../notes.html'));
+});
+
+// TODO: Create a GET * route that returns index.html
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.html'));
+});
 
 // Use the db.json on back-end to store and retrieve notes using the fs module
 // Promise version of fs.readFile
@@ -45,16 +48,7 @@ const { v4: uuidv4 } = require('uuid');
 
 
             
-// HTML routes
-// TODO: Create a GET /notes route that returns notes.html
-// app.get('/notes', (req, res) => {
-//     res.sendFile(join(__dirname, '../notes.html'));
-// });
 
-// TODO: Create a GET * route that returns index.html
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../index.html'));
-// });
 
 // API routes
 // TODO: Create a GET /api/notes route that reads the db.json file and returns all saved notes as JSON
