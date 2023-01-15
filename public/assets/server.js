@@ -81,4 +81,4 @@ app.get('/', (req, res) => {
 // Added a HTML route that will serve up the paths.html file
 // app.get('/paths', (req, res) => res.sendFile(path.join(__dirname, 'public/paths.html')));
 
-// app.listen(PORT, () => {console.log(`Server listening on port ${PORT}`)});
+app.listen(PORT, () => {console.log(`Server listening on port ${PORT}`)});
