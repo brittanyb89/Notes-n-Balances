@@ -46,6 +46,20 @@ GitHub Repo: https://github.com/brittanyb89/Notes-n-Balances
 
 ## Mock-Up
 
+The following image shows the web application's appearance and functionality:
+
+From here, the user would click on the "Get Started" button to be taken to the notes page.
+
+![Homepage](public/assets/images/note-taker1.png)
+
+Once on the notes page, the user can add a note title and note text. Once the user has added a note title and note text, the user can click the save icon in the top right corner of the page to save the note. The user can also delete a note by clicking the trash can icon next to the note title.
+
+![Note-taker page](public/assets/images/note-taker2.png)
+
+![Created Note](public/assets/images/note-taker3.png)
+
+![Saved Notes](public/assets/images/note-taker4.png)
+
 ## Usage
 
 Click link in top right corner of page to add notes. Once your notes are added and saved, you will be able to view them on the side of the page along with other saved notes.
